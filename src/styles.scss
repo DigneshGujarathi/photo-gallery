@@ -1,0 +1,163 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: gray;
+  font-family: Noto Sans, Helvetica, sans-serif;
+  color: #666;
+  letter-spacing: 1px;
+  min-height: 100vh;
+  font-size: 1.6rem;
+}
+
+/* ----- header ----- */
+
+header {
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+
+  .links {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 150%;
+    margin-top: 4rem;
+
+    .link:link,
+    .link:visited {
+      padding: 0.5rem 1rem;
+      margin: 2rem;
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s;
+    }
+
+    .link:hover,
+    .link:active {
+      border-bottom: 2px solid #fff;
+    }
+  }
+}
+
+h1 {
+  display: inline-block;
+  font-size: 200%;
+}
+
+h1,
+h2 {
+  color: initial;
+}
+
+/* ----- main content ----- */
+
+.home-page {
+  margin-top: 2rem;
+}
+
+.upload-form {
+  width: 60%;
+  margin: auto;
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 1px solid #000;
+  padding-left: 20%;
+  background: #eee;
+}
+
+.main-content {
+  width: 80%;
+  margin: auto auto 10rem auto;
+}
+
+.photos-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .photo {
+    width: 28.8rem;
+    overflow: hidden;
+    margin: 1rem;
+
+    img {
+      width: 100%;
+      height: 30rem;
+      transform: scale(1.1);
+      transition: all 1s;
+      &:hover {
+        transform: scale(1.01);
+      }
+    }
+  }
+}
+
+/* ---------- */
+
+button {
+  margin-right: 0.5rem;
+}
+
+.submit-btn {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+/* ----- messages  ----- */
+.errorMsg {
+  color: #f21e08;
+  background: #fff0f0;
+  padding: 1rem;
+}
+
+.successMsg {
+  color: #00ff00;
+  background: #077707;
+  padding: 1rem;
+}
+
+.centered-message {
+  width: 50rem;
+  margin: auto;
+}
+
+.message {
+  color: #0e1b1e;
+  font-size: 2.5rem;
+  margin-left: 1rem;
+}
+
+.loading-msg {
+  text-align: center;
+  font-size: 200%;
+  height: 20rem;
+  line-height: 20rem;
+}
+
+@media only screen and (max-width: 1200px) {
+  .main-content {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  body {
+    font-size: 1.3rem;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .photos-list {
+    .photo {
+      width: 80%;
+    }
+  }
+}
